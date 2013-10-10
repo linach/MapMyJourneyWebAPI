@@ -134,19 +134,19 @@ namespace MapMyJourney.WebApi.Controllers
 
         [ActionName("logout")]
         public HttpResponseMessage PutLogoutUser(
-            [ValueProvider(typeof(HeaderValueProviderFactory<string>))] string sessionKey)
+            [ValueProvider(typeof(HeaderValueProviderFactory<string>))] string authToken)
         {
             var responseMsg = this.PerformOperationAndHandleExceptions(
                () =>
                {
-                   if (sessionKey==null)
+                   if (authToken==null)
 	                {
                        throw new ArgumentNullException("User can logout only if he/she is logged in.");
 	                }
                    var context = new JourneysContext();
                    using (context)
                    {
-                       var user = context.Users.Where(u => u.AuthToken == sessionKey).FirstOrDefault();
+                       var user = context.Users.Where(u => u.AuthToken == authToken).FirstOrDefault();
                        if (user==null)
                        {
                            throw new ArgumentException("Session key is not valid");

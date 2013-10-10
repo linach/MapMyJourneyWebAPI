@@ -10,6 +10,24 @@ namespace MapMyJourney.WebApi
         public static void Register(HttpConfiguration config)
         {
             config.Routes.MapHttpRoute(
+               name: "UsersApi",
+               routeTemplate: "api/users/{action}",
+               defaults: new { controller = "users" }
+           );
+
+            config.Routes.MapHttpRoute(
+               name: "JourneysApi",
+               routeTemplate: "api/journeys/{action}",
+               defaults: new { controller = "journeys" }
+           );
+
+            config.Routes.MapHttpRoute(
+               name: "PlacesApi",
+               routeTemplate: "api/places/{action}",
+               defaults: new { controller = "places" }
+           );
+
+            config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
