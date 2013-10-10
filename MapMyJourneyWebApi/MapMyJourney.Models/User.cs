@@ -14,9 +14,9 @@ namespace MapMyJourney.Models
 
         public string DisplayName { get; set; }
 
-        public int AuthCode { get; set; }
+        public string AuthCode { get; set; }
 
-        public int AuthToken { get; set; }
+        public string AuthToken { get; set; }
 
         public virtual ICollection<Journey> Journeys { get; set; }
 
