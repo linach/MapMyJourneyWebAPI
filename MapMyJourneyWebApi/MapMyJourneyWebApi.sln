@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapMyJourneyWebApi", "MapMyJourneyWebApi\MapMyJourneyWebApi.csproj", "{DEEFBB9F-5708-4205-A3D3-574E52843404}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapMyJourney.Models", "MapMyJourney.Models\MapMyJourney.Models.csproj", "{A8E2472A-F4FE-4F98-93AD-ACC667E4B9E0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DEEFBB9F-5708-4205-A3D3-574E52843404}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEEFBB9F-5708-4205-A3D3-574E52843404}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEEFBB9F-5708-4205-A3D3-574E52843404}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEEFBB9F-5708-4205-A3D3-574E52843404}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8E2472A-F4FE-4F98-93AD-ACC667E4B9E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8E2472A-F4FE-4F98-93AD-ACC667E4B9E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8E2472A-F4FE-4F98-93AD-ACC667E4B9E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8E2472A-F4FE-4F98-93AD-ACC667E4B9E0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
