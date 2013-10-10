@@ -9,6 +9,6 @@ namespace MapMyJourney.WebApi.Models
     {
         public string Displayname { get; set; }
 
-        public string SessionKey { get; set; } 
+        public string AuthToken { get; set; } 
     }
 }

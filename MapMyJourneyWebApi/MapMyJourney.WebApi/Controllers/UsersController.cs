@@ -76,7 +76,7 @@ namespace MapMyJourney.WebApi.Controllers
                         var loggedModel = new LoggedUserModel()
                         {
                             Displayname = user.DisplayName,
-                            SessionKey = user.AuthToken
+                            AuthToken = user.AuthToken
                         };
 
                         var response =
@@ -119,7 +119,7 @@ namespace MapMyJourney.WebApi.Controllers
                       var loggedModel = new LoggedUserModel()
                       {
                           Displayname = user.DisplayName,
-                          SessionKey = user.AuthToken
+                          AuthToken = user.AuthToken
                       };
 
                       var response =
