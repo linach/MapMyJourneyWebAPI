@@ -29,7 +29,7 @@ namespace MapMyJourney.WebApi.Controllers
                         throw new ArgumentNullException("User is not logged in or does not exist!");
                     }
 
-                    var places = from allPlaces in context.VisitedPlaces
+                    var places = (from allPlaces in context.VisitedPlaces
                                  where allPlaces.Journey.Id == journeyId
                                  select new VisitedPlaceModel
                                  {
@@ -39,7 +39,7 @@ namespace MapMyJourney.WebApi.Controllers
                                      Longitude = allPlaces.Longitude,
                                      Picture = allPlaces.Picture,
                                      Comment = allPlaces.Comment
-                                 };
+                                 }).OrderBy(x=>x.Id);
 
                     return places;
                 });

@@ -22,7 +22,7 @@ namespace MapMyJourney.WebApi.Controllers
                 () =>
                 {
                     var context = new JourneysContext();
-                    var journeys = from allJourneys in context.Journeys
+                    var journeys = (from allJourneys in context.Journeys
                                    where allJourneys.User.AuthToken == authToken
                                    select new JourneyModel
                                    {
@@ -30,7 +30,7 @@ namespace MapMyJourney.WebApi.Controllers
                                        Name = allJourneys.Name,
                                        StartDate = allJourneys.StartDate,
                                        EndDate = allJourneys.EndDate
-                                   };
+                                   }).OrderByDescending(x=>x.StartDate);
 
                     return journeys;
                 });
