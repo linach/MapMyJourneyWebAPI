@@ -108,16 +108,5 @@ namespace MapMyJourney.WebApi.Areas.HelpPage
 
             return type.FullName;
         }
-
-
-        public string GetDocumentation(HttpControllerDescriptor controllerDescriptor)
-        {
-            return null;
-        }
-
-        public string GetResponseDocumentation(HttpActionDescriptor actionDescriptor)
-        {
-            return null;
-        }
     }
 }
