@@ -4,9 +4,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace MapMyJourney.WebApi.Controllers
 {
+    [EnableCors(origins: "http://mapmyjourneywebapi.apphb.com/", headers: "*", methods: "*")]
     public class BaseApiController : ApiController
     {
         protected T PerformOperationAndHandleExceptions<T>(Func<T> operation)

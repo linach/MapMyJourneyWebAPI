@@ -9,9 +9,11 @@ using MapMyJourney.Models;
 using System.Text;
 using MapMyJourney.WebApi.Attributes;
 using System.Web.Http.ValueProviders;
+using System.Web.Http.Cors;
 
 namespace MapMyJourney.WebApi.Controllers
 {
+    [EnableCors(origins: "http://mapmyjourneywebapi.apphb.com/", headers: "*", methods: "*")]
     public class UsersController : BaseApiController
     {
 
@@ -43,8 +45,6 @@ namespace MapMyJourney.WebApi.Controllers
                 () =>
                 {
                     var context = new JourneysContext();
-                    using (context)
-                    {
                         this.ValidateUsername(model.Username);
                         this.ValidateDisplayname(model.Displayname);
                         this.ValidateAuthCode(model.AuthCode);
@@ -83,7 +83,6 @@ namespace MapMyJourney.WebApi.Controllers
                             this.Request.CreateResponse(HttpStatusCode.Created,
                                             loggedModel);
                         return response;
-                    }
                 });
 
             return responseMsg;
